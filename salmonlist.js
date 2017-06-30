@@ -1,7 +1,10 @@
 var bittrex = require('node.bittrex.api');
 const prefix = 'https://bittrex.com/Market/Index?MarketName=';
 function calcTangNumber(obj){
-	obj.TangNumber = ((obj.High-obj.Last) - (obj.Last - obj.Low))/obj.High
+	obj.TangNumber = ((obj.High-obj.Last) - (obj.Last - obj.Low))/(obj.Last)
+
+    // obj.TangNumber = ((obj.High-obj.Last) - (obj.Last - obj.Low))/(obj.High-obj.Low) // coin giam dan deu
+    // obj.TangNumber = -((obj.High-obj.Last) - (obj.Last - obj.Low))/(obj.High-obj.Low) // coin tang dan deu
 	if (! /^BTC.*/.test(obj.MarketName)){
 		obj.TangNumber = -100;
 	}
