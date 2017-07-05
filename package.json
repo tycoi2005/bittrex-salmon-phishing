@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "salmon": "node salmonlist.js",
-    "pumpable": "node pumpablelist.js"
+    "pumpable": "node pumpablelist.js",
+    "eatpump": "node eatpump.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node.bittrex.api": "^0.3.2",
+    "numeral": "^2.0.6",
     "sync-loop": "^0.1.1"
   }
 }
